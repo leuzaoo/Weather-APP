@@ -16,6 +16,21 @@ var weatherT = document.querySelector(".weather");
 var searchInput = document.querySelector(".form-control");
 var searchButton = document.querySelector(".btn");
 var lowHigh = document.querySelector(".low-high");
+function searchResults(city) {
+    fetch("".concat(api.base, "weather?q=").concat(city, "&lang=").concat(api.lang, "&units=").concat(api.units, "&APPID=").concat(api.key))
+        .then(function (response) {
+        if (!response.ok) {
+            throw new Error("http error: status ".concat(response.status));
+        }
+        return response.json();
+    })
+        .catch(function (error) {
+        alert(error.message);
+    })
+        .then(function (response) {
+        displayResults(response);
+    });
+}
 searchButton.addEventListener("click", function () {
     searchResults(searchInput.value);
 });
