@@ -16,6 +16,19 @@ const searchInput: HTMLInputElement = document.querySelector(".form-control");
 const searchButton: HTMLElement = document.querySelector(".btn");
 const lowHigh: HTMLElement = document.querySelector(".low-high");
 
+window.addEventListener('load', () => {
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(setPosition, showError);
+    }
+    else {
+        alert('Este navegador não suporte Geolocalização');
+    }
+})
+
+
+
+
+
 function searchResults(city: string) {
   fetch(
     `${api.base}weather?q=${city}&lang=${api.lang}&units=${api.units}&APPID=${api.key}`

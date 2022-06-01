@@ -16,6 +16,14 @@ var weatherT = document.querySelector(".weather");
 var searchInput = document.querySelector(".form-control");
 var searchButton = document.querySelector(".btn");
 var lowHigh = document.querySelector(".low-high");
+window.addEventListener('load', function () {
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(setPosition, showError);
+    }
+    else {
+        alert('Este navegador não suporte Geolocalização');
+    }
+});
 function searchResults(city) {
     fetch("".concat(api.base, "weather?q=").concat(city, "&lang=").concat(api.lang, "&units=").concat(api.units, "&APPID=").concat(api.key))
         .then(function (response) {
