@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "tsc index.ts --target es5 --watch"
+  },
   "dependencies": {
     "bootstrap": "^5.2.0-beta1"
   }
