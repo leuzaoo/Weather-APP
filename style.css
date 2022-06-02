@@ -16,6 +16,7 @@
   background-color: rgba(23, 98, 133, 0.39);
   border-radius: 15px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
 }
 
 .city {
