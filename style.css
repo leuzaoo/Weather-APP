@@ -2,29 +2,69 @@
   font-family: "Poppins", sans-serif;
 }
 
-.weather-info{
+body {
+  background-image: linear-gradient(45deg, #019999, #ccebeb);
+}
+
+.weather-info {
   height: 100vh;
 }
 
 .container-temp {
   display: flex;
-  color: rgb(51, 51, 51);
+  color: white;
   justify-content: center;
   font-size: 56px;
   font-weight: bold;
-  text-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  background-color: rgba(23, 98, 133, 0.39);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background-image: linear-gradient(90deg, #5b9b9b, #06a1a1);
   border-radius: 15px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   cursor: pointer;
 }
 
 .city {
-  font-size: 24px;
+  font-size: 32px;
   text-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-.weather{
-    font-size: 24px;
+.date{
+  text-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
+.weather {
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #ccebeb;
+  border: 1px solid #076e6e;
+}
+
+.btn i {
+  color: black;
+}
+
+.city-date {
+  background-image: linear-gradient(90deg, #5b9b9b, #06a1a1);
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 10px;
+  color: white;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+.temperature-text{
+  text-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.celsius-signal{
+  text-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.sky-condition{
+  color: black ;
+  border-radius: 10px;
+  text-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}

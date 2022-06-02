@@ -18,22 +18,28 @@
     <title>Weather - APP</title>
   </head>
   <body>
-    <div class="container-fluid weather-info p-0 d-flex justify-content-center align-items-center">
+    <div
+      class="container-fluid weather-info d-flex justify-content-center align-items-center"
+    >
       <div class="card text-center shadow-lg" style="max-width: 26rem">
-        <div class="card-header">Tempo e Temperatura</div>
+        <div class="card-header">Previsão do Tempo</div>
 
         <div class="card-body">
-          <div class="city">Jundiaí-SP</div>
-          <div class="date">Quarta-Feira, 01/06/2022</div>
+          <div class="city-date">
+            <div class="city">Cidade - Estado</div>
+            <div class="date">Dia da Semana, Data</div>
+          </div>
           <div class="container-img">
             <img src="icons/unknown.png" alt="" />
           </div>
           <div class="container-temp my-4 mx-5">
-            <div>22</div>
-            <span>º</span>
+            <div class="temperature-text">22</div>
+            <span class="celsius-signal">º</span>
           </div>
-          <div class="weather mt-2">Nublado</div>
-          <div class="low-high">22º / 28º</div>
+          <div class="sky-condition fw-bold">
+            <div class="weather mt-2 fs-5">Estado Climático</div>
+            <div class="low-high fs-5">Mín. / Max.</div>
+          </div>
         </div>
         <div class="card-footer">
           <div class="input-group p-2">
@@ -41,6 +47,7 @@
               type="text"
               class="form-control search-input"
               placeholder="busque pela cidade"
+              style="background-color: #ccebeb; border: 1px solid #076e6e"
               aria-label="Recipient's username"
               aria-describedby="button-addon2"
             />
@@ -49,7 +56,7 @@
               type="button"
               id="button-addon2"
             >
-              <i class="fas fa-search "></i>
+              <i class="fas fa-search"></i>
             </button>
           </div>
         </div>
